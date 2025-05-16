@@ -10,4 +10,17 @@
 
 source /scratch/ashaky3/.env/bin/activate
 
-python parallel_v2.py   --fe_file fe.json   --mg_file mg.json   --si_file si.json   --o_file o.json   --n_file n.json   --partition_threshold 15   --fe_rich_threshold 5   --fe_poor_threshold 1 --skip 10 --nproc 20 --plot_k 5
+python run.py \
+  --fe_file fe.json \
+  --mg_file mg.json \
+  --si_file si.json \
+  --o_file o.json \
+  --n_file n.json \
+  --cell_size 68.0 \
+  --num_bins 8 \
+  --sub_bins 2 \
+  --partition_threshold 15 \
+  --fe_rich_threshold 7 \
+  --fe_poor_threshold 1 \
+  --skip 20 \
+  --save_intermediates
